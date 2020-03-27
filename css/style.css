@@ -1,30 +1,113 @@
-* {
-    background-color: #f3f2f4;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #f3f2f4;
-    border-radius: 10px;
-}
-
-body::-webkit-scrollbar {
-    width: 20px;
-    background-color: #f3f2f4;
-}
-
-body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #e9dbfd), color-stop(0.72, #eac3ff), color-stop(0.86, #cdaefc));
-}
-
-header {
-    background-image: url(../img/flower-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-}
+            * {
+                /*background-color: #f3f2f4;*/
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Sen', sans-serif;
+            }
+            
+            body::-webkit-scrollbar-track {
+                background-color: #f3f2f4;
+                border-radius: 10px;
+            }
+            
+            body::-webkit-scrollbar {
+                width: 20px;
+                background-color: #f3f2f4;
+            }
+            
+            body::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #e9dbfd), color-stop(0.72, #eac3ff), color-stop(0.86, #cdaefc));
+            }
+            
+            body {
+                background-color: #f3f2f4;
+            }
+            
+            nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                min-height: 8vh;
+                background-color: #e0ccff;
+                color: #660474;
+            }
+            
+            .logo {
+                color: #a120b3;
+                font-size: 20px;
+            }
+            
+            .navig {
+                display: flex;
+                width: 50%;
+                justify-content: space-around;
+            }
+            
+            .navig li {
+                list-style: none;
+            }
+            
+            .navig a {
+                color: #660474;
+                text-decoration: none;
+                letter-spacing: 2px;
+                font-weight: bold;
+                font-size: 15px;
+            }
+            
+            .burger {
+                display: none;
+            }
+            
+            .burger div {
+                width: 25px;
+                height: 4px;
+                background-color: #660474;
+                margin: 5px;
+            }
+            
+            @media screen and (max-width: 1060px) {
+                .navig {
+                    width: 75%;
+                }
+            }
+            
+            @media screen and (max-width: 768px) {
+                body {
+                    overflow-x: hidden;
+                }
+                .navig {
+                    position: absolute;
+                    right: 0;
+                    height: 92vh;
+                    top: 8vh;
+                    background-color: #e0ccff;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 50%;
+                    transform: translateX(100%);
+                    transition: transform 0.5s ease-in;
+                }
+                .navig li {
+                    opacity: 0;
+                }
+                .burger {
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+            
+            .nav-active {
+                transform: translateX(0%);
+            }
+            /*header {
+                background-image: url(../img/flower-background.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100vh;
+                width: 100%;
+            }*/
