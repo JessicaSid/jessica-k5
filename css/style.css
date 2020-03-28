@@ -161,7 +161,28 @@
         -webkit-transform: translate(-50%, -50%);
     }
     
-    #home .container {}
+    #home .container {
+        height: 100vh;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #home h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    
+    #home p {
+        font-size: 20px;
+        letter-spacing: 3px;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
     /*header {
                 background-image: url(../img/flower-background.jpg);
                 background-size: cover;
