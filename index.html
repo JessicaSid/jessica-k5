@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js.js"></script>
-    <script defer src="typed.js"></script>
+    <script type="text/javascript" src="typed.js"></script>
     <meta name="description" content="Portfolio">
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
     <title>Portfolio</title>
@@ -40,9 +40,16 @@
             <div class="center-div" id="container">
                 <h1>I am
                     <p id="typed"></p>
-                </h1>
-                <p>Designer, Imaginater, Programmer</p>
             </div>
+
+            <script type="text/javascript">
+                var typed = new Typed('#typed', {
+                    strings: ["Student", "Imaginater", "Programmer"],
+                    typeSpeed: 50,
+                    backSpeed: 50,
+                    loop: true
+                });
+            </script>
 
         </div>
 
